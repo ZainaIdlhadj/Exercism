@@ -17,6 +17,19 @@ import pack.Service.itemService;
 public class MController {
 	    @Autowired
 	    private itemService itemservice;
+	    
+	    @GetMapping("/find")
+	 	 public ArrayList<Item> findByDifficulty(@RequestParam("d") difficulty d,@RequestParam("s") Status s,@RequestParam("id") int id) {
+	 		ArrayList<Item>  items = (ArrayList<Item>) itemservice.find(d,s,id);
+	 		return items;
+	 		}
+	 	
+	 	@GetMapping("/items")
+	 		 public ArrayList<Item> findAll(){
+	 		ArrayList<Item> items = (ArrayList<Item>) itemservice.findAll();
+			
+	 		return items;
+	 		}
 
 	 	@GetMapping("/add")
 	 	public void add() {
@@ -45,16 +58,5 @@ public class MController {
 	 		itemservice.save(item5);
 	 		
 	 	}
-	 	@GetMapping("/find")
-	 	 public ArrayList<Item> findByDifficulty(@RequestParam("d") difficulty d,@RequestParam("s") Status s,@RequestParam("id") int id) {
-	 		ArrayList<Item>  items = (ArrayList<Item>) itemservice.find(d,s,id);
-	 		return items;
-	 		}
 	 	
-	 	@GetMapping("/items")
-	 		 public ArrayList<Item> findAll(){
-	 		ArrayList<Item> items = (ArrayList<Item>) itemservice.findAll();
-			
-	 		return items;
-	 		}
 }

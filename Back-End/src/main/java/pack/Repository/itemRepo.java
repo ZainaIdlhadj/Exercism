@@ -10,6 +10,11 @@ import pack.Model.Topic;
 import pack.Model.difficulty;
 
 public interface itemRepo  extends CrudRepository<Item, Long>  {
-	ArrayList<Item> findByDifficultyInAndStatusIn(ArrayList<Difficulty>difficulty, ArrayList<Status> status);
-	  ArrayList<Item> findByDifficultyInAndStatusInAndTopicsId(ArrayList<Difficulty>difficulty, ArrayList<Status> status, long id);
+	  public ArrayList<Item> findItemByDifficulty(difficulty d);
+	  public ArrayList<Item> findItemByStatut(Status s);
+	  public ArrayList<Item> findItemByTopicsIdAndStatut(int id,Status s);
+	  public ArrayList<Item> findItemByTopicsIdAndDifficulty(int id,difficulty d);
+	  public ArrayList<Item> findItemByTopicsId(int id);
+	  public ArrayList<Item> findByDifficultyAndStatutAndTopicsId(difficulty difficulty, Status status,int id);
+	  public ArrayList<Item> findItemByDifficultyAndStatut(difficulty difficulty, Status status);
 }
