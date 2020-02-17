@@ -1,6 +1,7 @@
 package pack.Model;
 
-public enum difficulty {
+
+public enum Difficulty {
 	Easy,
 	Medium,
 	Difficult,

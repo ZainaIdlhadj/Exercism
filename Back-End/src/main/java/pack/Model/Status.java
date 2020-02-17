@@ -5,5 +5,6 @@ public enum Status {
 	Unlocked,
 	Completed,
 	Locked,
-	All
+	All;
+	
 }

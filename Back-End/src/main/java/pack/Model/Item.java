@@ -1,6 +1,7 @@
 package pack.Model;
 
 import java.util.HashSet;
+
 import java.util.Set;
 
 import javax.persistence.*;
@@ -17,7 +18,7 @@ public class Item {
 	@Column(name = "img")
     private String img;
 	@Column(name = "difficulty")
-    private difficulty difficulty;
+    private Difficulty difficulty;
 	@Column(name = "statut")
 	private Status statut;
 
@@ -68,9 +69,8 @@ public class Item {
 
 
 
-	public Item(int id, String name, pack.Model.difficulty difficulty, Status statut, String img) {
+	public Item(String name, pack.Model.Difficulty difficulty, Status statut, String img) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.difficulty = difficulty;
 		this.statut = statut;
@@ -79,13 +79,13 @@ public class Item {
 
 
 
-	public difficulty getDifficulty() {
+	public Difficulty getDifficulty() {
 		return difficulty;
 	}
 
 
 
-	public void setDifficulty(difficulty difficulty) {
+	public void setDifficulty(Difficulty difficulty) {
 		this.difficulty = difficulty;
 	}
 
