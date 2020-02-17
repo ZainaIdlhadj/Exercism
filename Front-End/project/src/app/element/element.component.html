@@ -1,0 +1,23 @@
+ 
+   <a class="widget-side-exercise unlocked" rel="nofollow" data-method="post" href="/my/solutions?exercise_id=gigasecond&amp;track_id=java">
+ <div id='exercise-gigasecond'>
+<div class='icon'>
+        <div class='img' [ngStyle]="{'background-image': 'url(' + item.img + ')'}"></div>
+</div>
+<i aria-label="lock status locked" class="fas fa-lock status locked"></i>
+<i aria-label="unlock status unlocked" class="fas fa-unlock status unlocked"></i>
+<i aria-label="comment status mentoring-requested" class="fas fa-comment status mentoring-requested"></i>
+<i aria-label="adjust status in-progress" class="fas fa-adjust status in-progress"></i>
+<i aria-label="thumbs-up status approved" class="fas fa-thumbs-up status approved"></i>
+<div class='status completed'>
+<i aria-label="check" class="fas fa-check"></i>
+</div>
+<div class='title'>{{item.name}}</div>
+<div class='stats'>
+<div class='difficulty easy'>{{item.difficulty}}</div>
+</div>
+<div class='topics'>
+  <div class='topic' *ngFor="let topic of item.topics">{{topic.value}}</div>
+</div>
+</div>
+</a>

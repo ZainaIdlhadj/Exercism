@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+        <link rel="stylesheet" media="all" href="https://assets.exercism.io/assets/application-9142c387067ea1461bfb12dc29bcf779bf27886fef65f365c95c495b421c34a1.css" />
+        <link rel="preload" media="screen" href="//fonts.googleapis.com/css?family=Dosis:600,700,800" as="style" />
+        <link rel="preload" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.css" as="style" />
+        <link rel="preload" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-highlight/prism-line-highlight.css" as="style" />
+        <link rel="preload" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-okaidia.min.css" as="style" disabled="disabled" data-theme="dark" />
+        <link rel="preload" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css" as="style" data-theme="light" />
+        
+        <title>Java Track | Exercism</title>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+        <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'>
+        
+        <!-- Favicon -->
+        <link rel="stylesheet" type="text/css" href="java.component.css">
+        <link href='https://assets.exercism.io/assets/favicon/apple-touch-icon-57x57-fb4f6780a4b113ffe60214809ff3b4a7b7678fe53458d7385416afff8283170e.png' rel='apple-touch-icon-precomposed' sizes='57x57'>
+        <link href='https://assets.exercism.io/assets/favicon/apple-touch-icon-114x114-8d3516a30f134a564eb2578c96eae99e2c21bfe74bdac28e0945ed741f72b870.png' rel='apple-touch-icon-precomposed' sizes='114x114'>
+        <link href='https://assets.exercism.io/assets/favicon/apple-touch-icon-72x72-4ebeea76fc0ae80d3bb77a59752c5caf5d7debce078764ef95d6b69caa5e9c0b.png' rel='apple-touch-icon-precomposed' sizes='72x72'>
+        <link href='https://assets.exercism.io/assets/favicon/apple-touch-icon-144x144-2b3227f8282c3e7b4de1ef2d7f6b10e4105a3c6459fe1ffa2708d1ef21d8f58f.png' rel='apple-touch-icon-precomposed' sizes='144x144'>
+        <link href='https://assets.exercism.io/assets/favicon/apple-touch-icon-120x120-969d4edc6ae5d9a25e08aa7ed4f4b2cb51f72280c002921897fa5b55f638881f.png' rel='apple-touch-icon-precomposed' sizes='120x120'>
+        <link href='https://assets.exercism.io/assets/favicon/apple-touch-icon-152x152-60f1b255de144263788bc3567de33d96a7f2539922798f900ae9c3f70320b3b5.png' rel='apple-touch-icon-precomposed' sizes='152x152'>
+        <link href='https://assets.exercism.io/assets/favicon/favicon-32x32-4b88997131aa760497d619205b73dc82aa1d223447335a1436b73eb0ad95dff6.png' rel='icon' sizes='32x32' type='image/png'>
+        <link href='https://assets.exercism.io/assets/favicon/favicon-16x16-bc88c63d6b15688a0eabe1e7f977edb121e45ef4fc6a3699bc6bb970cf01fdea.png' rel='icon' sizes='16x16' type='image/png'>
+        
+</head>
+<body class='namespace-my controller-tracks action-show user-signed_in'>
+    <app-header></app-header>
+    <div class='container'style="paddingTop: 40px" >
+      
+               <app-filter [counter]=items.length></app-filter>
+   </div>
+        <div class='container'style="paddingTop: 20px" >
+                <div class="row" >  
+                        <div class="col-md-4" *ngFor="let item of items" style="max-width: 100%;">     
+                                 <app-element [item]=item></app-element>
+                       </div>
+         </div>
+  
