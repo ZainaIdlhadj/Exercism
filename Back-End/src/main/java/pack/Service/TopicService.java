@@ -21,7 +21,7 @@ public class TopicService {
         return (ArrayList<Topic>) repository.findAll();
 
          }
-    public Topic findbyValue(String value) {
+    public Topic findByValue(String value) {
     		return repository.findTopicByValue(value);
     }
 }

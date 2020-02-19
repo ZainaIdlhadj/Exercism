@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,9 +29,10 @@ public class TopicController {
 	 		topicservice.save(new Topic(7,"Equality"));
 	 		topicservice.save(new Topic(8,"File"));
 	 		topicservice.save(new Topic(9,"Games"));
-	 		topicservice.save(new Topic(10,"Logic"));
-	 		
+	 		topicservice.save(new Topic(10,"Logic"));	
 	 	}
+	 	
+	 	
 	 	@GetMapping("/items")
 	 		 public ArrayList<Topic> findAll(){
 	 		ArrayList<Topic> items = (ArrayList<Topic>) topicservice.findAll();
