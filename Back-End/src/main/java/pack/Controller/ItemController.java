@@ -22,7 +22,7 @@ public class ItemController {
 	    private TopicService topicservice;
 	    
 	    @GetMapping("/find")
-	 	 public ArrayList<Item> findByDifficulty(@RequestParam("d") Difficulty d,@RequestParam("s") Status s,@RequestParam("id") int id) {
+	 	 public ArrayList<Item> find(@RequestParam("d") Difficulty d,@RequestParam("s") Status s,@RequestParam("id") int id) {
 	 		ArrayList<Difficulty>  difficulty = new ArrayList<Difficulty>();
 	 		ArrayList<Status>  status = new ArrayList<Status>();
 	        if (d==Difficulty.All) difficulty.addAll(Arrays.asList(Difficulty.values()));
